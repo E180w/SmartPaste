@@ -1,0 +1,86 @@
+{
+  "name": "smartpaste",
+  "displayName": "SmartPaste",
+  "description": "Умная вставка кода с автоматической адаптацией к стилю проекта",
+  "version": "1.0.0",
+  "publisher": "smartpaste-dev",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Formatters",
+    "Snippets"
+  ],
+  "keywords": [
+    "paste",
+    "smart",
+    "code",
+    "style",
+    "formatting",
+    "imports",
+    "variables"
+  ],
+  "activationEvents": [
+    "onCommand:smartpaste.smartPaste",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "smartpaste.smartPaste",
+        "title": "Smart Paste",
+        "category": "SmartPaste"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "smartpaste.smartPaste",
+          "group": "9_cutcopypaste",
+          "when": "editorTextFocus"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "smartpaste.smartPaste",
+          "when": "editorTextFocus"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "smartpaste.smartPaste",
+        "key": "ctrl+shift+v",
+        "mac": "cmd+shift+v",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4",
+    "vsce": "^2.15.0"
+  },
+  "dependencies": {
+    "esprima": "^4.0.1",
+    "@types/esprima": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smartpaste-dev/smartpaste.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smartpaste-dev/smartpaste/issues"
+  },
+  "homepage": "https://github.com/smartpaste-dev/smartpaste#readme",
+  "license": "MIT"
+} 

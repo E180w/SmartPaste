@@ -1,0 +1,55 @@
+# Source TypeScript files
+src/**/*.ts
+src/**/*.map
+
+# Tests
+src/test/**
+src/**/*.test.ts
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+out/test/**
+out/**/*.map
+
+# Development files
+.vscode/
+.gitignore
+.git/
+.eslintrc.json
+tsconfig.json
+
+# Documentation (optional - include README.md)
+*.md
+!README.md
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Runtime
+*.pid
+*.seed
+*.pid.lock
+
+# Environment files
+.env*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build tools
+webpack.config.js
+rollup.config.js
+gulpfile.js
+
+# Package files
+package-lock.json
+yarn.lock 
