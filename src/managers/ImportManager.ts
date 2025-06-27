@@ -1,5 +1,4 @@
 import * as vscode from 'vscode';
-import * as path from 'path';
 import { ImportResult } from '../types';
 import { Logger } from '../utils/Logger';
 
@@ -9,7 +8,7 @@ export class ImportManager {
         code: string, 
         requiredImports: string[], 
         document: vscode.TextDocument, 
-        languageId: string
+        _languageId: string
     ): Promise<ImportResult> {
         Logger.info('Добавляем необходимые импорты');
         

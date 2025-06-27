@@ -3,7 +3,7 @@ import { Logger } from '../utils/Logger';
 
 export class VariableRenamer {
     
-    async renameVariables(code: string, projectStyle: ProjectStyle, languageId: string): Promise<string> {
+    async renameVariables(code: string, projectStyle: ProjectStyle, _languageId: string): Promise<string> {
         Logger.info('Переименовываем переменные под стиль проекта');
         
         try {

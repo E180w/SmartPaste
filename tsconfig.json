@@ -11,12 +11,21 @@
     "rootDir": "src",
     "strict": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "declaration": false,
+    "incremental": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
   },
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
     "node_modules",
-    ".vscode-test"
+    ".vscode-test",
+    "out"
   ]
 } 
